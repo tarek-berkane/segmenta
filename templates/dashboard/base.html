@@ -1,0 +1,54 @@
+{% extends "dashboard/template.html" %}
+{% load static %}
+
+{% block css_link %}
+    <link rel="stylesheet" href="{% static 'css/vendor/tabler.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+{% endblock %}
+
+{% block body %}
+    <div class="page">
+        {% include "dashboard/_partial/sidebar.html" %}
+        {% include "dashboard/_partial/header.html" %}
+
+        <div class="page-wrapper">
+            {% block page %}
+                    {% include 'dashboard/_partial/messages.html' %}
+                {% block page_header %}{% endblock %}
+                <div class="page-body">
+                    {% block page_body %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    {% block model %}
+        <div class="modal modal-blur fade" id="logout-model" tabindex="-1" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-title">Are you sure to logout?</div>
+                        <div>If you logout you will be redirect to login page.</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">Cancel
+                        </button>
+                        <form method="post" action="{% url 'dashboard:logout' %}">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-danger" value="Logout">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock model %}
+
+
+    
+{% endblock body %}
+
+
+{% block js %}
+    <script src="{% static 'js/vendor/tabler.min.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'dashboard/base.html' %}
+
+{% block page_header %}
+
+{% endblock %}
+
+{% block page_body %}
+<div class="container-xl">
+    <div class="card">
+        <div class="card-body">
+            <h1>User create</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{form}}
+                <div class="d-flex justify-content-end p-2">
+                    <input type="submit" class="btn btn-success" value="Save">
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

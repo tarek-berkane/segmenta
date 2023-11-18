@@ -1,0 +1,105 @@
+{% extends "dashboard/base.html" %}
+
+{% block page_header %}
+<div class="page-header d-print-none">
+    <div class="container-xl">
+      <div class="row g-2 align-items-center">
+        <div class="col">
+          <!-- Page pre-title -->
+          <div class="page-pretitle">
+            Overview
+          </div>
+          <h2 class="page-title">
+            User list
+          </h2>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item disabled"><a href="#">User list</a></li>
+          </ol>
+        </div>
+        <!-- Page title actions -->
+        <div class="col-auto ms-auto d-print-none">
+          <div class="btn-list">
+            <a href="{% url 'dashboard:user-create' %}" class="btn btn-primary d-none d-sm-inline-block" >
+              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+             
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M16 19h6" /><path d="M19 16v6" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4" /></svg>
+
+              Create new user
+            </a>
+            <a href="{% url 'dashboard:user-create' %}" class="btn btn-primary d-sm-none btn-icon" >
+              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M16 19h6" /><path d="M19 16v6" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4" /></svg>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock page_header %}
+
+
+{% block page_body %}
+<div class="container-xl">
+    <div class="card">
+        <div class="card-body border-bottom py-3">
+            <div class="d-flex">
+                <div class="ms-auto text-secondary">
+                    Search:
+                    <div class="ms-2 d-inline-block">
+                        <input type="text" class="form-control form-control-sm" aria-label="Search invoice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap datatable">
+                <thead>
+                <tr>
+                    <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox"
+                                           aria-label="Select all invoices"></th>
+                    <th class="w-1">No. <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm icon-thick" width="24"
+                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M6 15l6 -6l6 6"></path>
+                        </svg>
+                    </th>
+                    <th>Username</th>
+                    <th>email</th>
+                    <th>Create date</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for user in page_obj.object_list %}
+                        <tr>
+                    <td><input class="form-check-input m-0 align-middle" type="checkbox"
+                               aria-label="Select invoice"></td>
+                    <td><span class="text-secondary">{{ user.id }}</span></td>
+                    <td>{{ user.username }}</td>
+                    <td>
+                        {{ user.email }}
+                    </td>
+                    <td>
+                        {{ user.create_date }}
+                    </td>
+
+                    <td class="text-end">
+                        <a href="{% url 'dashboard:user-update' user.pk %}">edit</a>
+                    </td>
+                </tr>
+                    {% endfor %}
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <p class="m-0 text-secondary">  Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+            {% include "dashboard/_partial/pagination.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

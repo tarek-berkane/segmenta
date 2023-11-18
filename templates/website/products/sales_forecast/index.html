@@ -1,0 +1,132 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block extra_css_link %}
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="page bg-white">
+        {% include "website/_partial/full_header.html" %}
+
+        <div class="page-wrapper">
+            {% block page %}
+                {% include 'dashboard/_partial/messages.html' %}
+                {% block page_header %}{% endblock %}
+                <div class="page-body">
+                    <div class="container">
+                        <section class="d-flex flex-column justify-content-center align-items-center "style="height: 40vh">
+                            <h1 style="font-size: 2.8rem;line-height: 50px;" class="mb-3 text-center">Sales forecaster</h1>
+                            <span class="text-secondary text-center mb-4" style="font-size: 1.2rem;max-width: 800px">Introducing our state-of-the-art Sales Forecast Web Service – the key to unlocking unparalleled accuracy and foresight in your sales strategy. Supercharge your business decisions and revenue growth with predictive analytics that revolutionize the way you plan and execute your sales efforts.</span>
+                            <div class="d-flex py-2 gap-3">
+                                <a href="#features" class="btn btn-lg btn-github fw-normal">Explore features</a>
+                                <a href="#price" class="btn btn-lg btn-outline-azure fw-normal">Explore pricing</a>
+                            </div>
+                        </section>
+                        <section class="d-flex flex-column justify-content-center align-items-center mb-5">
+                            <img src="{% static 'images/sales/sfore.png' %}">
+
+                        </section>
+                        <section class="mb-3 " id='features'>
+                            <div class="row items-center text-center ">
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="avatar rounded-3 bg-azure-lt shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="icon icon-tabler icon-tabler-flame" width="24" height="24"
+                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                             stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2">Precise Predictions</h2>
+                                    <p class="text-muted fs-3">Harness the power of advanced AI algorithms to analyze historical data, market trends, and a multitude of influencing factors. Our Sales Forecast Web Service provides you with highly accurate predictions, empowering you to make informed decisions and stay ahead of market fluctuations. </p></div>
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up"
+                                     data-aos-delay="150">
+                                    <div class="avatar bg-azure-lt rounded-3 shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box"
+                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" fill="none" stroke-linecap="round"
+                                             stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/>
+                                            <path d="M12 12l8 -4.5"/>
+                                            <path d="M12 12l0 9"/>
+                                            <path d="M12 12l-8 -4.5"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2">Tailor your experience</h2>
+                                    <p class="text-muted fs-3">Precision meets adaptability as you customize your data inputs to reflect changes in product launches, market dynamics, or unexpected events. Achieve a level of forecasting precision that evolves with your business, allowing you to respond promptly to emerging opportunities or challenges.</p></div>
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up"
+                                     data-aos-delay="300">
+                                    <div class="avatar rounded-3 bg-azure-lt shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="icon icon-tabler icon-tabler-brand-speedtest" width="24" height="24"
+                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                             stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M5.636 19.364a9 9 0 1 1 12.728 0"/>
+                                            <path d="M16 9l-4 4"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2"> Optimize Inventory Management</h2>
+                                    <p class="text-muted fs-3">Strike the perfect balance between supply and demand. Our Sales Forecast Web Service helps you optimize inventory levels, preventing overstock or stockouts and ensuring you meet customer demand without unnecessary carrying costs.</p></div>
+                            </div>
+                        </section>
+                  
+                        <section id='price' class="section mb-5 py-3">
+                            <div class="page-body">
+                                <div class="container-xl">
+                                    <h2 class="text-center fs-1 mb-3">Pricing cards</h2>
+                                    {% include 'website/products/_partial/price.html' %}
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section mb-5">
+                            <div class="row ">
+                                <div class="col-6 d-none d-lg-flex justify-content-center align-items-center ">
+                                    <img src="{% static 'images/contact.svg' %}" width="500">
+                                </div>
+                                <div class="col-lg-6">
+                                    {% include 'website/products/_partial/contact.html' %}
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    {% block footer %}
+                        {% include 'website/_partial/footer.html' %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    {% block model %}
+        <div class="modal modal-blur fade" id="logout-model" tabindex="-1" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-title">Are you sure to logout?</div>
+                        <div>If you logout you will be redirect to login page.</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">Cancel
+                        </button>
+                        <form method="post" action="{% url 'dashboard:logout' %}">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-danger" value="Logout">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock model %}
+{% endblock body %}
+
+
+{% block extra_js %}
+    <script src="{% static 'js/vendor/aos.js' %}"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}

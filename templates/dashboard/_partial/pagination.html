@@ -1,0 +1,35 @@
+{% load url_tags %}
+
+<ul class="pagination m-0">
+    <li class="page-item {% if not page_obj.has_previous %} disabled {% endif %}">
+        <a class="page-link"
+           href="
+
+                   {% if page_obj.has_previous %}{% update_param request page_obj.previous_page_number %}{% endif %}"
+           tabindex="-1" aria-disabled="true">
+            <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M15 6l-6 6l6 6"></path>
+            </svg>
+            prev
+        </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+    <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+        <a class="page-link "
+           href="
+
+                   {% if  page_obj.has_next %}{% update_param request page_obj.next_page_number %}{% endif %}">
+            next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 6l6 6l-6 6"></path>
+            </svg>
+        </a>
+    </li>
+</ul>

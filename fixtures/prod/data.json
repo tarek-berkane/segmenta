@@ -1,0 +1,12 @@
+[
+    {
+      "model": "user.user",
+      "pk": 1,
+      "fields": {
+        "username": "riko",
+        "email": "riko@gmail.com",
+        "password": "pbkdf2_sha256$600000$s8Nu7UDT8vXsrXvcAGE990$/NwCCMVYxJ23hGqS4BxpJrWM/xpV767cc7RSB2Gohe8=",
+        "role": "SUPERVISOR"
+      }
+    }
+  ]

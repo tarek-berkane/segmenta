@@ -1,0 +1,39 @@
+{% if messages %}
+    <div class="p-2">
+        {% for message in messages %}
+            <div    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                class="alert alert-danger alert-dismissible"
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                class="alert alert-success alert-dismissible"
+            {% endif %}
+                role="alert">
+                <div class="d-flex">
+                    <div>
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon alert-icon" width="24"
+                                 height="24"
+                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                        {% elif message.level == DEFAULT_MESSAGE_LEVELS.success %}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon alert-icon" width="24"
+                                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l5 5l10 -10"></path>
+                            </svg>
+                        {% endif %}
+                    </div>
+                    <div>
+                        {{ message }}
+                    </div>
+                </div>
+                <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

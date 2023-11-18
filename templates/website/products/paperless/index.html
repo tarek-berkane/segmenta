@@ -1,0 +1,287 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block extra_css_link %}
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="page bg-white">
+        {% include "website/_partial/full_header.html" %}
+
+        <div class="page-wrapper">
+            {% block page %}
+                {% include 'dashboard/_partial/messages.html' %}
+                {% block page_header %}{% endblock %}
+                <div class="page-body">
+                    <div class="container">
+                        <section class="d-flex flex-column justify-content-center align-items-center "style="height: 40vh">
+                            <h1 style="font-size: 2.8rem;line-height: 50px;" class="mb-3 text-center">Paperless, all in one solution for document digitization</h1>
+                            <span class="text-secondary text-center mb-4" style="font-size: 1.2rem;max-width: 800px">Once integrated you'll forget about manual searching in archives, better yet, you will have reliable , searchable and organized copies of all your documents.</span>
+                            <div class="d-flex py-2 gap-3">
+                                <a href="#features" class="btn btn-lg btn-github fw-normal">Explore features</a>
+                                <a href="#price" class="btn btn-lg btn-outline-azure fw-normal">Explore pricing</a>
+                            </div>
+                        </section>
+                        <section class="d-flex flex-column justify-content-center align-items-center mb-5">
+                            <img src="{% static 'images/dashboard.png' %}">
+
+                        </section>
+                        <section class="mb-3 ">
+                            <div class="row items-center text-center ">
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="avatar rounded-3 bg-azure-lt shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="icon icon-tabler icon-tabler-flame" width="24" height="24"
+                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                             stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2">Zero loss</h2>
+                                    <p class="text-muted fs-3">Save digital copies and forget about them until you need them again, integrate data into your software within clicks and protect your papers against physical hazards</p></div>
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up"
+                                     data-aos-delay="150">
+                                    <div class="avatar bg-azure-lt rounded-3 shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box"
+                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" fill="none" stroke-linecap="round"
+                                             stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/>
+                                            <path d="M12 12l8 -4.5"/>
+                                            <path d="M12 12l0 9"/>
+                                            <path d="M12 12l-8 -4.5"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2">Save a lot of space</h2>
+                                    <p class="text-muted fs-3">No more spaces allocated for archives.</p></div>
+                                <div class="col-12 col-lg-4 aos-init aos-animate mb-4" data-aos="fade-up"
+                                     data-aos-delay="300">
+                                    <div class="avatar rounded-3 bg-azure-lt shape-md mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="icon icon-tabler icon-tabler-brand-speedtest" width="24" height="24"
+                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                             stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M5.636 19.364a9 9 0 1 1 12.728 0"/>
+                                            <path d="M16 9l-4 4"/>
+                                        </svg>
+                                    </div>
+                                    <h2 class="h3 fs-2">Search for document faster</h2>
+                                    <p class="text-muted fs-3">Boost your business efficiency by saving on search time, search for your specific document by any feature, extract them and have a rigid base for statistics and analysis.</p></div>
+                            </div>
+                        </section>
+                        <section id="features" class="section mb-5 py-5">
+                            <div class="container">
+                                <div class="row ">
+                                    <div class="col-lg-6 order-1 order-md-0 d-flex justify-content-center align-items-center"><img alt="" loading="lazy" width="564"
+                                                               decoding="async" data-nimg="1" class="mx-auto"
+                                                               src="{% static 'images/paperless/editing.png' %}"
+                                                               style="color: transparent;"></div>
+                                    <div class="col-lg-6 d-flex flex-column items-center order-0 order-md-0 mb-2">
+                                        <div class="section-header w-100">
+                                            <h4 class="fs-2 mb-4 text-center text-lg-start">Digitize your desk smoothly</h4></div>
+                                        <div class="space-y-3">
+                                            <div data-aos="fade-up" data-aos-delay="0" class="aos-init">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-target-arrow icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <circle cx="12" cy="12" r="1"></circle>
+                                                                <path d="M12 7a5 5 0 1 0 5 5"></path>
+                                                                <path d="M13.004 3.055a9 9 0 1 0 7.941 7.945"></path>
+                                                                <path d="M15 6v3h3l3 -3h-3v-3z"></path>
+                                                                <path d="M15 9l-3 3"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Speed and accuracy</h3>
+                                                        <p class="text-muted m-0">Convenience of use and result accuracy is always our main focus, with paperless, you will be able to insert documents in bulk into your software system</p></div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="150" class="aos-init">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-brush icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M3 21v-4a4 4 0 1 1 4 4h-4"></path>
+                                                                <path d="M21 3a16 16 0 0 0 -12.8 10.2"></path>
+                                                                <path d="M21 3a16 16 0 0 1 -10.2 12.8"></path>
+                                                                <path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Personalization</h3>
+                                                        <p class="text-muted m-0">You get to choose what to highlight in your document , with the ability of singling out specific elements such as administrative stamps.</p></div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="300" class="aos-init">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-device-mobile icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+                                                                <line x1="11" y1="4" x2="13" y2="4"></line>
+                                                                <line x1="12" y1="17" x2="12" y2="17.01"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Great document quality</h3>
+                                                        <p class="text-muted m-0">Highly optimized document image processing makes it possible to have files of the best quality.</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section mb-3">
+                            <div class="container">
+                                <div class="row ">
+                                    <div class="col-lg-6 d-flex flex-column items-center mb-2">
+                                        <div class="section-header w-100"><h4
+                                                class="fs-2 mb-4 text-center text-lg-start">Focus on your work flow and we will take care of the technical aspect of it.</h4></div>
+                                        <div class="space-y-3">
+                                            <div data-aos="fade-up" data-aos-delay="0" class="aos-init aos-animate">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-brand-bootstrap icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M2 12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2"></path>
+                                                                <path d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2"></path>
+                                                                <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Manageable Metadata</h3>
+                                                        <p class="text-muted m-0">With our solution, it's not just the data inside the file matters, but the metadata as well, we provide you with suitable ready to use metadata.</p></div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="150" class="aos-init aos-animate">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-layout-dashboard icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M4 4h6v8h-6z"></path>
+                                                                <path d="M4 16h6v4h-6z"></path>
+                                                                <path d="M14 12h6v8h-6z"></path>
+                                                                <path d="M14 4h6v4h-6z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Batch Processing</h3>
+                                                        <p class="text-muted m-0">Dive into the world of automation with paperless, explore batch digital file processing and handling.</p></div>
+                                                </div>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="300" class="aos-init">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="avatar bg-primary-lt rounded-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                 class="icon icon-tabler icon-tabler-tools icon"
+                                                                 width="24" height="24" viewBox="0 0 24 24"
+                                                                 stroke-width="2" stroke="currentColor" fill="none"
+                                                                 stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                                                                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                                                                <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                                                                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                                                                <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                                                                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"><h3>Ease of integration</h3>
+                                                        <p class="text-muted m-0">We use technologies that can be seemlessly integrated into existing systems, decreasing friction in work and giving liberty to your IT departement.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex justify-content-center align-items-center"><img alt="" loading="lazy" width="564"
+                                                               decoding="async" data-nimg="1" class="mx-auto"
+                                                               src="{% static 'images/paperless/documents-filter.png' %}"
+                                                               style="color: transparent;"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id='price' class="section mb-5 py-5">
+                            <div class="page-body">
+                                <div class="container-xl">
+                                    <h2 class="text-center fs-1 mb-3">Pricing cards</h2>
+                                    {% include 'website/products/_partial/price.html' %}
+                                  
+
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section mb-5">
+                            <div class="row ">
+                                <div class="col-6 d-none d-lg-flex justify-content-center align-items-center ">
+                                    <img src="{% static 'images/contact.svg' %}" width="500">
+                                </div>
+                                <div class="col-lg-6">
+                                    {% include 'website/products/_partial/contact.html' %}
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    {% block footer %}
+                        {% include 'website/_partial/footer.html' %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    {% block model %}
+        <div class="modal modal-blur fade" id="logout-model" tabindex="-1" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-title">Are you sure to logout?</div>
+                        <div>If you logout you will be redirect to login page.</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">Cancel
+                        </button>
+                        <form method="post" action="{% url 'dashboard:logout' %}">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-danger" value="Logout">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock model %}
+{% endblock body %}
+
+
+{% block extra_js %}
+    <script src="{% static 'js/vendor/aos.js' %}"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}

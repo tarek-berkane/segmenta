@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #e5e7f2;
+}
+.resNav {
+  display: none;
+  width: 40%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #00021a;
+  z-index: 1000;
+  padding: 20px;
+}
+.fa-times {
+  color: #e5e7f2;
+  font-size: 26px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.resNav a {
+  display: block;
+  color: #e5e7f2;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
+/*.navBar {*/
+/*  width: 100%;*/
+/*  height: 69px;*/
+/*  background-color: #00021a;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  padding: 20px 160px;*/
+/*  position: fixed;*/
+/*  z-index: 99;*/
+/*}*/
+.logo {
+  text-decoration: none;
+  color: #e5e7f2;
+  font-size: 1.2rem;
+}
+.fa-bars {
+  color: #e5e7f2;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+.hero {
+  height: 60vh;
+  /*background-image: url("../img/bg1.png");*/
+  /*
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+  padding-left: 160px;
+  display: flex;
+  padding-top: 69px;
+  color: #e5e7f2;
+}
+.logo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logoImage {
+  padding-right: 10px;
+  width: 43px;
+  height: 40px;
+}
+.logoImageRight {
+  width: 185px;
+  height: 211px;
+}
+.links {
+  display: flex;
+  gap: 49px;
+}
+.link {
+  color: #e5e7f2;
+  font-size: 14px;
+  text-decoration: none;
+}
+.active {
+  font-weight: bold;
+}
+.signup {
+  width: 93px;
+  border-radius: 10px;
+  border: #e5e7f2 3px solid;
+  background-color: transparent;
+  color: #e5e7f2;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 1.5px;
+  margin-right: 10px;
+}
+.login {
+  width: 78px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: #e5e7f2 3px solid;
+  background-color: transparent;
+  color: #e5e7f2;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 1.5px;
+}
+.signup:hover {
+  color: #00021a;
+  background-color: #e5e7f2;
+}
+.login:hover {
+  color: #00021a;
+  background-color: #e5e7f2;
+}
+.left,
+.right {
+  width: 50%;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.left h1 {
+  margin-bottom: 15px;
+}
+.left p {
+  margin-bottom: 15px;
+}
+.left .btn-explore {
+  text-decoration: none;
+  color: #e5e7f2;
+  background: #00021a;
+  padding: 1.5px 40px;
+  border-radius: 10px;
+  width: 186px;
+  height: 32px;
+  font-size: 12px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* card section */
+.cards {
+  padding: 25px 160px;
+  gap: 14.5px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  background-color: #00021a;
+  padding: 10px 12px;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-radius: 30px;
+  width: 352px;
+  height: 424px;
+  position: relative;
+}
+.card h3 {
+  color: #e5e7f2;
+  font-size: 20px;
+}
+.card p {
+  margin-top: 40px;
+  color: #e5e7f2;
+}
+.card h4 {
+  color: #e5e7f2;
+  font-size: 16px;
+  font-weight: bold;
+}
+.card .pic {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.special {
+  background: rgb(153, 157, 205);
+  background: linear-gradient(
+    155deg,
+    rgba(153, 157, 205, 1) 0%,
+    rgba(0, 2, 26, 1) 100%
+  );
+}
+.special h3 {
+  padding-top: 15px;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-bottom: 3px solid white;
+}
+.special h4 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.sales-forecast {
+  background-color: transparent;
+  /*background-image: url("../img/sales_forecast.png");*/
+  height: 424px;
+  width: 731px;
+}
+.sales-forecast h3 {
+  color: #26a851;
+  font-size: 32px;
+
+}
+.sales-forecast h4 {
+  color: #26a851;
+  font-size: 24px;
+}
+
+.sales-forecast p {
+  color: #26a851;
+  font-size: 16px;
+}
+
+
+.unlock-all {
+  background: rgb(153, 157, 205);
+  background: linear-gradient(
+    155deg,
+    rgba(153, 157, 205, 1) 0%,
+    rgba(0, 2, 26, 1) 100%
+  );
+}
+
+.unlock-all h3 {
+  color: #000b81;
+}
+.unlock-all h4 {
+  color: #000b81;
+}
+
+.unlock-all p {
+  color: #000b81;
+}
+.img-s {
+  width: 97px;
+  height: 97px;
+}
+@media (max-width: 768px) {
+  /*.navBar {*/
+  /*  padding: 10px 10px;*/
+  /*}*/
+  .fa-bars {
+    display: block !important;
+    padding-right: 16px;
+  }
+  .links,
+  .buttons {
+    display: none;
+  }
+  .signup,
+  .login {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .hero {
+    background-image: url("../img/pic.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-left: 70px;
+  }
+  .hero .right {
+    display: none;
+  }
+  .hero .left {
+    width: 100%;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 60px;
+  }
+  .sales-forecast {
+    width: 352px;
+    height: 424px;
+  }
+}
